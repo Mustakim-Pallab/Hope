@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Exo+2:wght@300&display=swap');
+
+.about_container {
+    background-color: #094838;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    padding-top: 60px;
+  }
+  .about_text_container
+  {
+    align-items: center;
+    text-align: center;
+  }
+  .about_text {
+    width:921px;
+    background-color: rgb(255,255,255,0.205);
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    
+  }
+ .about_text>p {
+    padding: 40px;
+    color: #fff;
+    font-size:26px;
+    font-family: 'Exo 2', sans-serif;
+    
+    font-weight:lighter;
+    text-align: center;
+  }
+  .about_text2> h3 {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 1.875rem;font-family: 'Aref Ruqaa Ink', serif;
+    /* font-family: 'be vietnam'; */
+    font-weight:lighter;
+  }
+  
+
+@media screen and (max-width: 1040px) {
+.about_text {
+    width:90%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
+    
+    }
+}
+    

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Exo+2:wght@300&display=swap');
+.card{
+
+    /* height:400px; */
+    width: 400px !important;
+
+}
+.image{
+    height: 200px;
+    width: 50%;
+    justify-content:center ;
+}
+.word{
+    width: 50%;
+    justify-content:center ;
+}
+.about_text2 {
+    
+    font-size: 3rem;
+    font-family: 'Aref Ruqaa Ink', serif;
+    /* font-family: 'be vietnam'; */
+    font-weight:lighter;
+  }
