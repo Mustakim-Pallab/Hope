@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Lobster+Two&family=Exo+2:wght@300&display=swap');
 .about{
-    background-color: #27abb7 ;
+    /* background-color: #27abb7 ; */
+    background-color: #23a484;
 }
 .image{
     width: 45%;
@@ -32,5 +33,18 @@
 }
 
 .subsection button{
-    background-color: orangered;
+    font-family: 'Exo 2', sans-serif;
+    background-color: rgb(232, 113, 113); 
+    font-size: medium;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.subsection button:hover{
+    border-color: rgb(229, 83, 83);
+    background-color: transparent;
+    border-color: rgb(232, 113, 113);
+    border: 2px solid rgb(232, 113, 113);
+    padding: 8.5px;
+    
 }

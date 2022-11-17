@@ -16,7 +16,7 @@ const HomeAbout = () => {
                 </h2>
                 <p>
                 Hope is an online counseling and psychotherapy website. Our team consists of professional therapists and counselors. Our goal is to make professional therapy accessible, affordable and convenient. Anyone struggling with mental health can reach us anytime from anywhere.
-                </p>
+                </p> <br/>
                 <button>
                     Learn More
                 </button>

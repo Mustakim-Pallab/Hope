@@ -6,8 +6,9 @@
     opacity: .9;
 }
 .back{
-    /* background-color: rgb(2, 34, 50); */
-    background-color:#122136 ;
+    background-color: #094838;
+    background-image: linear-gradient(to bottom right, #094838 ,#95f3ed);;
+    /* background-color:#122136 ; */
 }
 
 input[type="text"]:focus{
