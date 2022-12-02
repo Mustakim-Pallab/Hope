@@ -1,0 +1,2 @@
+export const PUBLIC_KEY =
+  "pk_test_51JaIbvIxtcInUxhwCDVbKhsW6GVarYS83fIEXwF32LZ4Yk5T4bMpCoClcWreMl9Y8Ns8jffntQdeNMEDhAEy0XLk00qYgiTVGy";
