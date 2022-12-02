@@ -1,42 +1,87 @@
-import img1 from "../../Assets/Images/img-t1.jpg";
-import img2 from "../../Assets/Images/img-t2.jpg";
-import img3 from "../../Assets/Images/img-t3.jpg";
+import img1 from "../../Assets/Images/doctor1.jpg";
+import img2 from "../../Assets/Images/doctor2.jpg";
+import img3 from "../../Assets/Images/doctor3.jpg";
+import img4 from "../../Assets/Images/doctor4.jpg";
+import img5 from "../../Assets/Images/doctor5.jpg";
+import img6 from "../../Assets/Images/doctor6.jpg";
 
 export const Therapist = [
   {
     _id: 1,
-    name: "lorem ipsum",
+    name: "Dr. Abdul Karim",
     image: img1,
-    description: "MBBS, MFill",
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka",
+    Tags:[
+       'psychology',
+       'psychotherapy',
+       'physio'
+
+    ]
   },
   {
     _id: 2,
-    name: "lorem ipsum",
+    name: "Dr. Hannan Miah",
     image: img2,
-    description: "MBBS, MFill",
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka",
+    Tags:[
+      'Treatment',
+      'Specialist',
+      'physio'
+
+   ]
   },
   {
     _id: 3,
-    name: "lorem ipsum",
+    name: "Dr. Selina Gomez",
     image: img3,
-    description: "MBBS, MFill",
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka", 
+    Tags:[
+      'Care',
+      'Specialist',
+      'Yoga'
+
+   ]
   },
   {
     _id: 4,
-    name: "lorem ipsum",
-    image: img1,
-    description: "MBBS, MFill",
+    name: "Dr. Khanchan Jangha Maitra",
+    image: img4,
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka", 
+    Tags:[
+      'Traumatology',
+      'psychotherapy',
+      'physio'
+
+   ]
   },
   {
     _id: 5,
-    name: "lorem ipsum",
-    image: img3,
-    description: "MBBS, MFill",
+    name: "Dr. Beuti Barua",
+    image: img5,
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka", 
+    Tags:[
+      'mindreader',
+      'psychotherapy',
+      'verbal'
+
+   ]
   },
   {
     _id: 6,
-    name: "lorem ipsum",
-    image: img1,
-    description: "MBBS, MFill",
+    name: "Dr. Azad Kashmir Rehman",
+    image: img6,
+    degree:"MBBS, FCPS",
+    description: " Professor & Head, Dept. of Psychiatry,National Institute of Mental Health, Dhaka", 
+    Tags:[
+      'Traumatology',
+      'psychotherapy',
+      'physio'
+
+   ]
   },
 ];

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Exo+2:wght@300&display=swap");
-
+ 
 .about_container {
-  background-color: #094838;
+  /* background-color: #094838; */
+  
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -13,13 +14,18 @@
 .about_text_container {
   align-items: center;
   text-align: center;
+  background-image: url('../../Assets/Images/online3.jpeg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .about_text {
   width: 921px;
   background-color: rgb(255, 255, 255, 0.205);
+  background-color: rgba(82, 78, 78, 0.65);
   margin: auto;
   align-items: center;
-  text-align: center;
+  text-align: justify;
 }
 .about_text > p {
   padding: 40px;

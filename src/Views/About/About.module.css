@@ -1,0 +1,12 @@
+.pos {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    z-index: 999 !important;
+  }
+  .pos1 {
+    position: fixed;
+    z-index: 999;
+  }
+  

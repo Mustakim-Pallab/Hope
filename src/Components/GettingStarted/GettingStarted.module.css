@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Old+Standard+TT&display=swap");
+.main {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.325), rgba(0, 0, 0, 0.267)) url(../../Assets/Images/councelling.jpg); */
+  background-color:honeydew
+}
+.number {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  text-align: center;
+  justify-content: center;
+  /* color: #cbc6c1; */
+}
+.number:last-child {
+  border-right: none;
+}
+.para {
+  font-size: 1.2em;
+  text-align: center;
+}
+.title {
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+.subtitle {
+  font-family: "Old Standard TT", serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.img{
+    
+}

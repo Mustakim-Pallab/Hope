@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Gilda+Display&family=Old+Standard+TT&display=swap");
+.first {
+  font-size: 10em;
+  font-weight: 200;
+  /* color: #95f3ed; */
+  /* border: 1px solid aqua; */
+  border-radius: 550px;
+}
+
+.images {
+  height: 400px;
+  width: 100%;
+  opacity: 1;
+}
+/* .images:hover{
+  margin:-10px 0 0 0;
+} */
+.excellence {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2.5em;
+  text-align: center;
+}
+.offer {
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+.para {
+  text-align: center;
+}
+.title {
+  font-family: "Gilda Display", serif;
+  font-weight: 300;
+}
+.button {
+}
