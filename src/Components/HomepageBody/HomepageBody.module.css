@@ -1,56 +1,54 @@
-.home{
-    background-image: url(../../Assets/Images/happy2.jpg);
-    
-    height: 595px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -999 !important;
-    overflow: hidden;
-}
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Freehand&display=swap');
+.home {
+  background-image: url(../../Assets/Images/happy2.jpg);
 
-.header{
-    font-family: 'Frank Ruhl Libre', serif;
-    font-size: 7em;
-    color: rgb(255, 255, 255);
-    justify-items: center;
-    align-items: center;
-    z-index: -999 !important;
-    position: relative;
-    top: 120px;
-    left: 70px;
-    
+  height: 595px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -999 !important;
+  overflow: hidden;
 }
-.heading{
-    font-family: 'Frank Ruhl Libre', serif;
-    font-size: 1.5em;
-    color: rgb(255, 255, 255);
-    position: relative;
-    top: 100px;
-    left: 78px;
-}
-.heading span{
-    font-family: 'Freehand', cursive;
-    font-size: 2.5em;
-    top:100px;
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Freehand&display=swap");
 
+.header {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 7em;
+  color: rgb(255, 255, 255);
+  justify-items: center;
+  align-items: center;
+  z-index: -999 !important;
+  position: relative;
+  top: 120px;
+  left: 70px;
 }
-.button{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background-color:rgb(224, 134, 134); */
-    background-color: rgb(232, 113, 113); 
-    font-size: medium;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    /* cursor: pointer; */
+.heading {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 100px;
+  left: 78px;
 }
-.button:hover{
-    background-color: transparent;
-    border-color: rgb(232, 113, 113);
-    border: 2px solid rgb(232, 113, 113);
-    padding: 8.5px;
-    color: rgb(232, 113, 113);
-    
+.heading span {
+  font-family: "Freehand", cursive;
+  font-size: 2.5em;
+  top: 100px;
+}
+.button {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* background-color:rgb(224, 134, 134); */
+  background-color: rgb(232, 113, 113);
+  font-size: medium;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  /* cursor: pointer; */
+}
+.button:hover {
+  background-color: transparent;
+  border-color: rgb(232, 113, 113);
+  border: 2px solid rgb(232, 113, 113);
+  padding: 8.5px;
+  color: rgb(232, 113, 113);
 }

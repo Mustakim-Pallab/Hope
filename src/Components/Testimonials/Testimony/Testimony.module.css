@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Cinzel&display=swap");
+.image {
+  align-items: center;
+  /* height: 500px; */
+}
+.testimonials {
+  align-items: center;
+}
+.testimony {
+  font-family: "Alegreya", serif;
+  height: 300px;
+}
+.testimony span {
+  font-size: 1.2em;
+}

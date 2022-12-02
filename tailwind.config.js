@@ -23,6 +23,7 @@ module.exports = {
         white: "#ffffff",
         yellow: "#e5ae58",
         navyblue: "#122136",
+        orange: "#E87171",
       },
     },
   },

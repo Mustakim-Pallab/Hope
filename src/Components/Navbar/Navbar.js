@@ -14,7 +14,10 @@ function classNames(...classes) {
 const Navbar = () => {
   const [Current, setCurrent] = useState(window.location.pathname);
   return (
-    <Disclosure as="nav" className="bg-white rounded-l-lg border h-26 sticky z-50">
+    <Disclosure
+      as="nav"
+      className="bg-white rounded-l-lg border h-26 sticky z-50"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8 my-3.5">

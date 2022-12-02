@@ -1,14 +1,11 @@
-.pos{
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 90%;
-    z-index: 999 !important;
+.pos {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 90%;
+  z-index: 999 !important;
 }
-.pos1{
+.pos1 {
   position: sticky;
-  z-index: 999
+  z-index: 999;
 }
-
-
-    

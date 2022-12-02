@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Gilda+Display&family=Old+Standard+TT&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Dancing+Script:wght@600&display=swap");
+.consultation {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2.5em;
+  /* text-align: center; */
+}
+.get {
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5em;
+}
+.get span {
+  font-family: "Dancing Script", cursive;
+}
+.para {
+  font-family: "Old Standard TT", serif;
+}

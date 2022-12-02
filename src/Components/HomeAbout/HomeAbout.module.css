@@ -1,50 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Lobster+Two&family=Exo+2:wght@300&display=swap');
-.about{
-    /* background-color: #27abb7 ; */
-    background-color: #23a484;
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Lobster+Two&family=Exo+2:wght@300&display=swap");
+.about {
+  /* background-color: #27abb7 ; */
+  /* background-color: #23a484; */
+  background-image: linear-gradient(to bottom right, #094838, #95f3ed);
 }
-.image{
-    width: 45%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 40%;
+.image {
+  width: 45%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 40%;
 }
-.subsection{
-    margin-top: 5%;
-    padding-right: 10%;
-    text-align: justify;
-    color: white;
+.subsection {
+  margin-top: 3%;
+  padding-right: 10%;
+  text-align: justify;
+  color: white;
 }
-.aboutUs{
-    font-family: 'Frank Ruhl Libre', serif;
-    text-transform: uppercase;
+.aboutUs {
+  font-family: "Frank Ruhl Libre", serif;
+  text-transform: uppercase;
 }
-.hello{
-    font-family: 'Lobster Two', cursive;
-    font-size: 4.5em;
-    
-    
+.hello {
+  font-family: "Lobster Two", cursive;
+  font-size: 4.5em;
 }
-.subsection p{
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    text-transform: capitalize;
-
+.subsection p {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-.subsection button{
-    font-family: 'Exo 2', sans-serif;
-    background-color: rgb(232, 113, 113); 
-    font-size: medium;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
+.subsection button {
+  font-family: "Exo 2", sans-serif;
+  background-color: rgb(232, 113, 113);
+  font-size: medium;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
-.subsection button:hover{
-    border-color: rgb(229, 83, 83);
-    background-color: transparent;
-    border-color: rgb(232, 113, 113);
-    border: 2px solid rgb(232, 113, 113);
-    padding: 8.5px;
-    
+.subsection button:hover {
+  border-color: rgb(229, 83, 83);
+  background-color: transparent;
+  border-color: rgb(232, 113, 113);
+  border: 2px solid rgb(232, 113, 113);
+  padding: 8.5px;
 }

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Fasthand&family=Frank+Ruhl+Libre:wght@300&family=Gilda+Display&family=Lobster+Two&display=swap');
+.footer {
+  background-image: linear-gradient(to bottom right, #094838, #95f3ed);
+}
+.name {
+  font-family: "Lobster Two", cursive;
+  font-size: 2em;
+  cursor:pointer;
+}
+.para {
+  font-family: "Exo 2", sans-serif;
+  
+}
+.services {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  
+}
+
+.menu{
+    
+    font-family: "Exo 2", sans-serif;
+    font-size:small;
+    cursor:pointer;
+    text-align: justify;
+    
+}
+.icon{
+    font-size: 4em !important;
+}
+.iconenv{
+    font-size: 1.6em !important;
+}
+
+.prepared{
+    font-family: 'Gilda Display', serif;
+}
+.pallab{
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.2em;
+    
+
+}
+.sign{
+    font-family: 'Fasthand', cursive;
+    font-size: 1.5em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) { .icon{
+    font-size: 4em !important;
+}}
+@media only screen and (min-width: 401px)  and (max-width:599px){ .icon{
+    font-size: 2.5em !important;
+}}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {.icon{
+    font-size: 2em !important;
+}}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {.icon{
+    font-size: 4em !important;
+}}
+@media only screen and (min-width: 868px) {.icon{
+    font-size: 3em !important;
+}}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 952px) {.icon{
+    font-size: 2em !important;
+}}
+@media only screen and (min-width: 1200px) {.icon{
+    font-size: 2em !important;
+}}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1286px) {.icon{
+    font-size: 4em !important;
+}
+
+}
