@@ -5,10 +5,10 @@ import Typewriter from "typewriter-effect";
 
 const Testimony = ({ data }) => {
   return (
-    <div className={`grid grid-cols-4 ${styles.testimonials}`}>
-      <div></div>
+    <div className={`grid sm:grid-cols-2 lg:px-56 pb-2 ${styles.testimonials}`}>
+      {/* <div></div> */}
 
-      <img src={data.image} alt="" className={`${styles.image}`} />
+      <img src={data.image} alt="" className={`${styles.image}  pb-20 md:pb-2`} />
       <div className={`${styles.testimony} text-justify `}>
         <FaQuoteLeft />
         {data.testimony}

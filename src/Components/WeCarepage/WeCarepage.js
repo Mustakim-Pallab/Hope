@@ -15,20 +15,28 @@ const WeCarepage = ({ data }) => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1124,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          
+        },
+      },
+      {
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
+          
         },
       },
       {
@@ -42,7 +50,7 @@ const WeCarepage = ({ data }) => {
   };
   return (
     <Fade top cascade>
-      <div className={`px-32 py-32`}>
+      <div className={`sm:px-16 md:px-20 lg:px-32 py-32`}>
         <h2 className={`${styles.psychology} text-green `}> Psychology </h2>
         <h2 className={`${styles.offer} text-dark pb-16 `}>
           {" "}
@@ -72,7 +80,7 @@ const WeCarepage = ({ data }) => {
                     {item.description.slice(0, 95)}...
                   </p>
                   <button
-                    className={`${styles.button} p-2 text-yellow hover:underline rounded-lg mx-28`}
+                    className={`${styles.button}  text-yellow hover:underline rounded-lg w-full justify-center`}
                   >
                     Read More
                   </button>

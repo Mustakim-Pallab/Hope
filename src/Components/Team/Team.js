@@ -1,9 +1,11 @@
 import React from "react";
+import { Rotate } from "react-reveal";
 import styles from "./Team.module.css";
 
 const Team = ({ data }) => {
   return (
     <div className={`p-24`}>
+      <Rotate top left>
       <h1 className={`${styles.excellence} text-green`}>Excellence</h1>
       <h1 className={`${styles.offer} text-green text-center `}>
         Meet Our Team
@@ -12,18 +14,25 @@ const Team = ({ data }) => {
         Maecenas nec mi in est maximus fermentum. Suspendisse tempus, nibh id
         convallis porttitor, ipsum.
       </p>
-
-      <div className={`grid xl:grid-cols-3 lg:grid-cols-2 gap-10 p-16 text-center`}>
+      </Rotate>
+      <div
+        className={`grid xl:grid-cols-3 lg:grid-cols-2 gap-10 p-16 text-center`}
+      >
         {data.map((item) => (
-          <div class="max-w-sm roundedmt-10 my-10 overflow-hidden shadow-lg hover:my-1" key={item.id}>
+          <div
+            class="max-w-sm rounded mt-10 my-10 overflow-hidden shadow-lg hover:text-yellow hover:mt-8"
+            key={item.id}
+          >
             <img
               class="w-full "
               src={item.image}
-              alt="Sunset in the mountains"
+              alt={`Contains ${item.name}`}
               className={` ${styles.images}`}
             />
             <div class="px-6 py-4">
-              <div class={`font-bold text-xl mb-2 ${styles.title}`}>{item.name}</div>
+              <div class={`font-bold text-xl mb-2 ${styles.title}`}>
+                {item.name}
+              </div>
               <p class="text-gray-700 text-base">{item.degree}</p>
               <p class="text-gray-700 text-base ">{item.description}</p>
             </div>
