@@ -10,37 +10,72 @@ export const WeCareFakeData = [
     image: img1,
     title: "Children therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-      
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+    points: [
+      "Phasellus semper vulputate diam. Nullam eget dui",
+      "Morbi dignissim nisl non convallis faucibus. Curabitur",
+      "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+      "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+    ],
   },
   {
     image: img2,
     title: "Couples therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-  },
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+      points: [
+        "Phasellus semper vulputate diam. Nullam eget dui",
+        "Morbi dignissim nisl non convallis faucibus. Curabitur",
+        "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+        "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+      ],
+    },
   {
     image: img3,
     title: "Post-Divorce therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+      points: [
+        "Phasellus semper vulputate diam. Nullam eget dui",
+        "Morbi dignissim nisl non convallis faucibus. Curabitur",
+        "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+        "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+      ],
   },
   {
     image: img4,
     title: "Anti-Depression therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+      points: [
+        "Phasellus semper vulputate diam. Nullam eget dui",
+        "Morbi dignissim nisl non convallis faucibus. Curabitur",
+        "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+        "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+      ],
   },
   {
     image: img5,
     title: "Individual therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+      points: [
+        "Phasellus semper vulputate diam. Nullam eget dui",
+        "Morbi dignissim nisl non convallis faucibus. Curabitur",
+        "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+        "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+      ],
   },
   {
     image: img6,
     title: "Anti-stress therapy",
     description:
-      "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+      "Sed dapibus sit amet augue tincidunt venenatis. Praesent libero urna, pretium sed finibus et, tincidunt quis ipsum. Maecenas a lectus in leo fermentum finibus tincidunt nec felis.",
+      points: [
+        "Phasellus semper vulputate diam. Nullam eget dui",
+        "Morbi dignissim nisl non convallis faucibus. Curabitur",
+        "Nullam eleifend, erat ut molestie varius, augue erat sagittis",
+        "Sed vel ullamcorper nisl. Aliquam sodales, lectus",
+      ],
   },
 ];

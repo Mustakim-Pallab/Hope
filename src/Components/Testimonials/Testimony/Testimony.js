@@ -8,7 +8,11 @@ const Testimony = ({ data }) => {
     <div className={`grid sm:grid-cols-2 lg:px-56 pb-2 ${styles.testimonials}`}>
       {/* <div></div> */}
 
-      <img src={data.image} alt="" className={`${styles.image}  pb-20 md:pb-2`} />
+      <img
+        src={data.image}
+        alt=""
+        className={`${styles.image}  pb-20 md:pb-2`}
+      />
       <div className={`${styles.testimony} text-justify `}>
         <FaQuoteLeft />
         {data.testimony}

@@ -24,8 +24,8 @@ const Testimonials = ({ data }) => {
         </div>
 
         <Slider {...settings} className={`pt-12`}>
-          {data.map((item) => (
-            <Testimony data={item} key={item.author} />
+          {data.map((item,i) => (
+            <Testimony data={item} key={i} />
           ))}
         </Slider>
       </Fade>

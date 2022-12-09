@@ -49,8 +49,8 @@ const TherapistSider = ({ data }) => {
         <h3>Our Therapists</h3>
       </div>
       <Slider {...settings} className="">
-        {data.map((item) => (
-          <div className={styles.card}>
+        {data.map((item,i) => (
+          <div className={styles.card} key={i}>
             <div className={`mx-auto  container  `}>
               <img
                 className={` rounded-lg border-2 mx-auto border-green ${styles.image}`}

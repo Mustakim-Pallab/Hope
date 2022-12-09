@@ -24,12 +24,7 @@ const About = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // const [Therapist, setTherapist] = useState([]);
-  // useEffect(()=>{
-  //     fetch('./fakedata.json')
-  //     .then(res=>res.json())
-  //     .then(data=>console.log(data));
-  // },[])
+
   return (
     <div className="overflow-x-hidden">
       <Topbar />
@@ -44,10 +39,10 @@ const About = () => {
       )}
 
       <AboutPageTop />
-      <WeCarepage data={WeCareFakeData}/>
-      <GettingStarted  />
-      <Team data={Therapist}/>
-      <Footer/>
+      <WeCarepage data={WeCareFakeData} />
+      <GettingStarted />
+      <Team data={Therapist} />
+      <Footer />
     </div>
   );
 };

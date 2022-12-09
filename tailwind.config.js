@@ -8,6 +8,8 @@ module.exports = {
       colors: {
         green: "#094838",
         "green-100":"#6e8e84",
+        "green-40":"rgba(240, 245, 244, 0.527)",
+        "green-50":"#f2f8f6",
         current: "currentColor",
         primary: "#2D65CB",
         "primary-500": "#4284E4",
@@ -15,6 +17,7 @@ module.exports = {
         "gray-600": "#55606C",
         "gray-100": "#E4E7EA",
         "gray-200": "#CCD2D8",
+        "gray-300": "#616161",
         "gray-400": "#7D8793",
         "grey-700":"#414C58",
         secondary: "#CCD2D8",

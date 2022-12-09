@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Playfair+Display&family=Playfair+Display+SC&display=swap");
+
+.title {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+.description {
+  font-family: "Overpass", sans-serif;
+}
