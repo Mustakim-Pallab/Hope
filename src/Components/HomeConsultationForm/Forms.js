@@ -4,9 +4,7 @@ import StripeHandle from "./StripeHandle";
 
 const Forms = () => {
   const {
-    register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const [Values, setValues] = useState({
