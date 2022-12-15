@@ -1,6 +1,7 @@
 import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import { useState } from "react";
+import { Fade } from "react-reveal";
 import styles from "./FAQ_AskMore.module.css";
 
 const FAQ_AskMore = () => {
@@ -14,7 +15,7 @@ const FAQ_AskMore = () => {
   });
   const [clicked, setClicked] = useState(false);
   return (
-    <div>
+    <Fade top>
       <h1 className={`text-center text-green ${styles.not} pt-20`}>
         Not Enough?
       </h1>
@@ -57,7 +58,7 @@ const FAQ_AskMore = () => {
           )}
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

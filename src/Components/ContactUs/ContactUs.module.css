@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Gilda+Display&family=Old+Standard+TT&display=swap");
+
+.ContactUs {
+  font-family: "Old Standard TT", serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+address{
+    font-size: 1.2em;
+    font-family: "Old Standard TT", serif;
+}

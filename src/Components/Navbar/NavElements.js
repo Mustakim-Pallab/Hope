@@ -3,6 +3,6 @@ export const navigation = [
   { name: "About", href: "/about", current: false },
   { name: "Services", href: "/services", current: false },
   { name: "FAQ", href: "/FAQ", current: false },
-  { name: "Resources", href: "/resources", current: false },
+  // { name: "Resources", href: "/resources", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
