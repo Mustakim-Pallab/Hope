@@ -1,5 +1,4 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import axios from "axios";
 import React, { useState } from "react";
 
 const CARD_ELEMENT_OPTIONS = {
@@ -44,7 +43,6 @@ export default function PaymentForm({ handlePayment }) {
 
         console.log(paymentMethod.id);
         handlePayment(id);
-        console.log(handlePayment(id))
         setSuccess(true);
       } catch (error) {
         console.log("Error", error);
