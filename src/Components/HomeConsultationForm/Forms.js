@@ -5,23 +5,24 @@ import StripeHandle from "./StripeHandle";
 const Forms = () => {
   const {
     handleSubmit,
-    formState: { errors },
   } = useForm();
   const [Values, setValues] = useState({
-    firstname: "",
-    lastName: "",
-    email: "",
-    city: "",
-    state: "",
-    zip: "",
-    address: "",
-    paymentId: "",
+    firstname: null,
+    lastName: null,
+    email: null,
+    city: null,
+    state: null,
+    zip: null,
+    address: null,
+    paymentId: null,
   });
 
   const handlePayment = async (paymentId) => {
+    
     Values.paymentId = paymentId;
     console.log(Values);
   };
+  
   return (
     <div>
       <form className="w-full max-w-lg" onSubmit={handleSubmit(handlePayment)}>
@@ -150,8 +151,10 @@ const Forms = () => {
         </div>
         <div className="flex flex-wrap -mx-3">
           <div className="w-full px-3">
+              
             <StripeHandle handlePayment={handlePayment} />
           </div>
+          
         </div>
       </form>
     </div>

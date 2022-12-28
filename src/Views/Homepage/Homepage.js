@@ -29,7 +29,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div>
+    <main>
       <Topbar />
       {Scroll <= 110 ? (
         <nav className={`sticky top-0 z-50 ${styles.pos}`}>
@@ -50,7 +50,7 @@ const Homepage = () => {
         <HomeConsultationForm />
         <Footer/>
       </div>
-    </div>
+    </main>
   );
 };
 

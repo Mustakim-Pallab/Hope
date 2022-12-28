@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {
-  CardElement,
   Elements,
-  useElements,
-  useStripe,
 } from "@stripe/react-stripe-js";
-import { Await } from "react-router-dom";
-import axios from "axios";
 import PaymentForm from "./Payment";
-import { PUBLIC_KEY } from "./keys";
+
+const PUBLIC_KEY = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
+// console.log(PUBLIC_KEY);
 
 const StripeHandle = ({ handlePayment }) => {
   

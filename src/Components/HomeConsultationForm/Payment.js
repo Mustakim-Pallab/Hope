@@ -24,6 +24,7 @@ export default function PaymentForm({ handlePayment }) {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
+  const [error, setError] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,12 +44,15 @@ export default function PaymentForm({ handlePayment }) {
 
         console.log(paymentMethod.id);
         handlePayment(id);
+        console.log(handlePayment(id))
         setSuccess(true);
       } catch (error) {
         console.log("Error", error);
+        
       }
     } else {
       console.log(error.message);
+      setError(error.message)
     }
   };
 
@@ -67,6 +71,11 @@ export default function PaymentForm({ handlePayment }) {
           >
             Confirm
           </button>
+         {
+          error?<p className={`font-serif text-xs text-red-600`}>
+          ***{error}
+        </p>:<p></p>
+         }
         </div>
       ) : (
         <div>
