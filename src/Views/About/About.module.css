@@ -1,6 +1,6 @@
 .pos {
     position: absolute;
-    top: 10%;
+    top: 80px;
     left: 10%;
     width: 90%;
     z-index: 999 !important;

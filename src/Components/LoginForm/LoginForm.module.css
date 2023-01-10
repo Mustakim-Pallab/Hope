@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Playfair+Display&display=swap');
+.section{
+    width: 560px;
+}
+.name{
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+.welcome{
+    font-family: 'Jost', sans-serif;
+    font-size: 2.5em;
+}
+.sign{
+    font-family: 'Jost', sans-serif;
+}

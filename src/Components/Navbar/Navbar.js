@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-white rounded-l-lg border h-26 sticky z-50"
+      className="bg-white rounded-l-lg border  h-26 sticky z-50"
     >
       {({ open }) => (
         <>

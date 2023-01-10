@@ -5,7 +5,7 @@ import ServiceTopbar from '../../Components/ServiceTopbar/ServiceTopbar';
 import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer'
 import { WeCareFakeData } from '../Homepage/WeCareFakeData';
-import styles from './Services.module.css'
+import styles from '../Homepage/Homepage.module.css'
 
 const Services = () => {
     const [Scroll, setScroll] = useState(window.scrollY);

@@ -5,6 +5,7 @@ import About from './Views/About/About';
 import Services from './Views/Services/Services';
 import FAQ from './Views/FAQ/FAQ';
 import Contact from './Views/Contact/Contact';
+import Login from './Views/Login/Login';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/services' element={<Services/>}/>
       <Route path='/faq' element={<FAQ/>} />
       <Route path='/contact' element={<Contact/>} />
+      <Route path='/login' element={<Login/>} />
       
       {/* <Route path='/about' element={<About/>} />
       <Route path='/services' element={<Services/>} />
