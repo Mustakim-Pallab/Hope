@@ -27,6 +27,7 @@ module.exports = {
         yellow: "#e5ae58",
         navyblue: "#122136",
         orange: "#E87171",
+        git:"#24292f"
       },
     },
   },

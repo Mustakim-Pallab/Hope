@@ -1,19 +1,19 @@
 import React from "react";
 import LoginBack from "../../Components/LoginBack/LoginBack";
-import LoginForm from "../../Components/LoginForm/LoginForm";
 import Navbar from "../../Components/Navbar/Navbar";
-import styles from "./Login.module.css";
+import RegisterForm from "../../Components/RegisterForm/RegisterForm";
+import styles from "./register.module.css";
 
-const Login = () => {
+const Register = () => {
   return (
     <div>
       <Navbar />
-      <LoginBack/>
+      <LoginBack />
       <div className={`${styles.form}`}>
-      <LoginForm/>
+        <RegisterForm />
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
