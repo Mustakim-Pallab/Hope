@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../Hooks/useAuth";
@@ -9,10 +9,20 @@ function classNames(...classes) {
 }
 
 const RegisterForm = () => {
-  const { CreateAccountWithEmailAndPassword } = UseAuth();
+  const {
+    auth,
+    User,
+    isLoading,
+    setUser,
+    setIsLoading,
+    EmailAndPasswordSignIn,
+    SignInWithGoogle,
+    CreateAccountWithEmailAndPassword,
+  } = UseAuth();
 
   const [Current, setCurrent] = useState(window.location.pathname);
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState('');
   const [phone, setPhone] = useState("");
   const [trialPassword, setTrialPassword] = useState({
     inputPass: "null",
@@ -43,7 +53,8 @@ const RegisterForm = () => {
       CreateAccountWithEmailAndPassword(email, trialPassword.inputPass)
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
+          setIsLoading(true);
+          setUser(userCredential.user);
           setRegistered(true);
           navigate("/");
 
@@ -52,9 +63,15 @@ const RegisterForm = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorMessage);
+
+          setMessage(errorMessage);
+
           // ..
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
+
       console.log("Password matched");
     } else {
       setMatched(false);
@@ -62,7 +79,11 @@ const RegisterForm = () => {
 
     setOkay(true);
   };
-
+  
+  console.log(message);
+  if (User.email) {
+    return <div>{navigate("/")}</div>;
+  }
   return (
     <section
       className={`${styles.section} p-10 border rounded-lg justify-center bg-green-50`}
@@ -110,19 +131,21 @@ const RegisterForm = () => {
       <form onSubmit={HandleEmailAndPasswordSignUp}>
         <div className="mb-6 border-b  border-gray-100">
           <input
-            type="text"
-            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="email"
+            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none focus:ring-0"
             id="exampleFormControlInput2"
             placeholder="Email address"
+            // required
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6 border-b  border-gray-100">
           <input
-            type="text"
-            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="tel"
+            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full focus:ring-0 text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none"
             id="exampleFormControlInput2"
             placeholder="Phone Number"
+            pattern="[0-9]{3}-[0-9]{8}"
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>
@@ -180,7 +203,7 @@ const RegisterForm = () => {
             <button
               type="button"
               disabled
-              className={`inline-block px-7 py-3 bg-green text-white font-medium text-sm leading-snug uppercase  rounded-full shadow-md hover:bg-green-100 ${styles.sign} hover:text-white hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out`}
+              className={`inline-block px-7 py-3 text-white font-medium text-sm leading-snug uppercase  rounded-full shadow-md bg-green-100 ${styles.sign} hover:text-white hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition duration-150 ease-in-out`}
             >
               Loading.....
             </button>
@@ -192,6 +215,13 @@ const RegisterForm = () => {
             </p>
           )}
         </div>
+        {message ? <p
+            className={` text-green-100 text-center text-sm my-6 ${styles.sign}`}
+          >
+            {" "}
+            *** {message}{" "}
+          </p> : <p></p>}
+
         {!Okay && Matched ? (
           <p></p>
         ) : !Okay ? (

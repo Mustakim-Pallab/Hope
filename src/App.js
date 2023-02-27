@@ -8,6 +8,7 @@ import Contact from "./Views/Contact/Contact";
 import Login from "./Views/Login/Login";
 import Register from "./Views/Register/Register";
 import AuthProvider from "./Components/Context/AuthProvider";
+import ForgetPass from "./Views/Login/ForgetPass";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/forget" element={<ForgetPass/>} />
 
             {/* <Route path='/about' element={<About/>} />
       <Route path='/services' element={<Services/>} />

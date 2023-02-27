@@ -1,13 +1,84 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import UseAuth from "../Hooks/useAuth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const LoginForm = () => {
+  const {
+    auth,
+    User,
+    isLoading,
+    setUser,
+    setIsLoading,
+    EmailAndPasswordSignIn,
+    SignInWithGoogle,
+    CreateAccountWithEmailAndPassword,
+  } = UseAuth();
+
   const [Current, setCurrent] = useState(window.location.pathname);
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const url = location.state?.from || "/";
+
+  if (User.email) {
+    return <div>{navigate("/")}</div>;
+  }
+
+  const HandleEmailAndPasswordLogin = (e) => {
+    e.preventDefault();
+    EmailAndPasswordSignIn(email, pass)
+      .then((userCredential) => {
+        // Signed in
+        // ...
+        setIsLoading(true);
+        setUser(userCredential.user);
+        navigate(url);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setMessage(errorMessage);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+    console.log(message);
+  };
+
+  const HandleGoogleLogin = () => {
+    SignInWithGoogle()
+      .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        setIsLoading(true);
+        setUser(result.user);
+        navigate(url);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        const email = error.email;
+
+        const credential = GoogleAuthProvider.credentialFromError(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
   return (
     <section
       className={`${styles.section} p-10 border rounded-lg justify-center bg-green-50`}
@@ -52,13 +123,15 @@ const LoginForm = () => {
       <p className={` text-green-100 text-center text-sm my-6 ${styles.sign}`}>
         Sign Into Your Account!
       </p>
-      <form>
+      <form onSubmit={HandleEmailAndPasswordLogin}>
         <div className="mb-6 border-b  border-gray-100">
           <input
-            type="text"
-            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none"
-            id="exampleFormControlInput2"
+            type="email"
+            className="appearance-none text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none focus:ring-0"
             placeholder="Email address"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
         </div>
         <div className="mb-6 border-b  border-gray-100">
@@ -67,6 +140,9 @@ const LoginForm = () => {
             className="appearance-none focus:ring-0 text-center italic bg-transparent border-none border-b-2 w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none"
             id="exampleFormControlInput2"
             placeholder="Password"
+            onChange={(e) => {
+              setPass(e.target.value);
+            }}
           />
         </div>
 
@@ -79,27 +155,37 @@ const LoginForm = () => {
             />
             <label
               className={`form-check-label inline-block ${styles.sign} text-green`}
-              htmlFor ="exampleCheck2"
+              htmlFor="exampleCheck2"
             >
               Remember me
             </label>
           </div>
-          <a
-            href="#!"
+          <Link
             className={`text-green-100 hover:text-green  ${styles.sign}`}
+            to="/forget"
           >
             Forgot password?
-          </a>
+          </Link>
         </div>
 
         <div className="text-center lg:text-center justify-center flex flex-row">
           <button
-            type="button"
+            type="submit"
             className={`inline-block px-7 py-3 bg-green text-white font-medium text-sm leading-snug uppercase  rounded-full shadow-md hover:bg-green-100 ${styles.sign} hover:text-white hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out`}
           >
             Login
           </button>
         </div>
+        {message != "" ? (
+          <p
+            className={` text-green-100 text-center text-sm my-6 ${styles.sign}`}
+          >
+            {" "}
+            *** {message}{" "}
+          </p>
+        ) : (
+          <p></p>
+        )}
       </form>
       <div className="flex items-center my-4 before:flex-1 before:border-t before:border-green before:mt-0.5 after:flex-1 after:border-t after:border-green after:mt-0.5">
         <p
@@ -109,6 +195,7 @@ const LoginForm = () => {
         </p>
       </div>
 
+      {/* Facebook */}
       <div className="w-full">
         <div className="flex flex-row items-center justify-center ">
           <button
@@ -129,10 +216,12 @@ const LoginForm = () => {
             </svg>
           </button>
 
+          {/* Google */}
           <button
             type="button"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
+            onClick={HandleGoogleLogin}
             className="inline-block p-3 bg-green text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
           >
             <svg
@@ -147,6 +236,7 @@ const LoginForm = () => {
             </svg>
           </button>
 
+          {/* Github */}
           <button
             type="button"
             data-mdb-ripple="true"

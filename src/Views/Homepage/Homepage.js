@@ -12,6 +12,7 @@ import Testimonials from "../../Components/Testimonials/Testimonials";
 import { testimonyData } from "./TestimonyData";
 import HomeConsultationForm from "../../Components/HomeConsultationForm/HomeConsultationForm";
 import Footer from "../../Components/Footer/Footer";
+import UseAuth from "../../Components/Hooks/useAuth";
 
 
 const Homepage = () => {
@@ -20,7 +21,6 @@ const Homepage = () => {
     const handleScroll = (event) => {
       setScroll(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {

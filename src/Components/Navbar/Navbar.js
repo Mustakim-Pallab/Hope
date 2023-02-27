@@ -6,6 +6,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../Assets/Images/logo.png";
 import { Link } from "react-router-dom";
 import { navigation } from "./NavElements";
+import UseAuth from "../Hooks/useAuth";
+import { getAuth, signOut } from "firebase/auth";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +15,19 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const [Current, setCurrent] = useState(window.location.pathname);
+  const { User } = UseAuth();
+  console.log(User);
+  console.log(User.photoURL);
+  const handleSignOut = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   return (
     <Disclosure
       as="nav"
@@ -58,7 +73,7 @@ const Navbar = () => {
                           item.href == Current
                             ? "bg-green-100 text-white rounded-md"
                             : "text-green hover:text-green-100",
-                          "px-3 py-1.5  text-md    rounded-md"
+                          "px-3 py-1.5  text-md  rounded-md"
                         )}
                         onClick={() => setCurrent(window.location.pathname)}
                         // aria-current={item.current ? 'page' : undefined}
@@ -68,13 +83,14 @@ const Navbar = () => {
                     ))}
                   </div>
                 </div>
-                <Menu as="div" className="relative ml-3">
+                {
+                  User.email?<Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-green-100 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-100">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src={`${User.photoURL}`}
                         alt=""
                       />
                     </Menu.Button>
@@ -104,20 +120,34 @@ const Navbar = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <button
                             href="#"
                             className={classNames(
-                              active ? "bg-gray-100" : "",
+                              active
+                                ? "bg-gray-100 w-full text-left"
+                                : "w-full text-left",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
+                            onClick={handleSignOut}
                           >
                             Sign out
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu>:<Link
+                        
+                        to='/login'
+                        className={classNames(
+                           "bg-green-50 text-green rounded-full hover:text-white px-3 py-1.5 mx-3 hover:bg-green-100 text-sm"
+                        )}
+                        onClick={() => setCurrent(window.location.pathname)}
+                        // aria-current={item.current ? 'page' : undefined}
+                      >
+                        Login
+                      </Link>
+                }
               </div>
             </div>
           </div>
