@@ -10,8 +10,8 @@ export const numbers = [
   },
   {
     title: "Successful Therapy",
-    num: 2,
-    sign: "k+",
+    num: 2000,
+    sign: "+",
   },
   {
     title: "Medical Branch",

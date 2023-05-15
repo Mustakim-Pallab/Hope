@@ -9,7 +9,7 @@
   background-attachment: fixed;
   position: sticky;
   color: white;
-  height: 480px;
+  /* height: 480px; */
 }
 .number {
   font-family: "Playfair Display", serif;
@@ -23,7 +23,7 @@
 }
 .para {
   font-size: 1.2em;
-  text-align: center;
+  /* text-align: center; */
 }
 .title {
   font-family: "Old Standard TT", serif;

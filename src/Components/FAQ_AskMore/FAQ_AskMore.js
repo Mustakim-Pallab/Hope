@@ -6,9 +6,12 @@ import styles from "./FAQ_AskMore.module.css";
 
 const FAQ_AskMore = () => {
   const handleAskButton = () => {
-    setClicked(true);
+    values.email != "" && values.question != ""
+      ? setClicked(true)
+      : setError(true);
     console.log(values);
   };
+  const [Error, setError] = useState(false);
   const [values, setValues] = useState({
     email: "",
     question: "",
@@ -37,7 +40,7 @@ const FAQ_AskMore = () => {
             placeholder="Enter Your Question Here"
             onChange={(e) => (values.question = e.target.value)}
           />
-          {!clicked ? (
+          {!clicked ?  (
             <button
               type="submit"
               onClick={handleAskButton}
@@ -54,9 +57,18 @@ const FAQ_AskMore = () => {
             >
               {" "}
               Thanks
+              
             </button>
           )}
         </div>
+        {Error ? (
+          <p className={`text-red-700 text-xs text-center`}>
+            {" "}
+            ***Error Occured, Maybe for any field is empty or anything else{" "}
+          </p>
+        ) : (
+          <p></p>
+        )}
       </div>
     </Fade>
   );

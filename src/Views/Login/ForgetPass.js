@@ -44,6 +44,7 @@ const ForgetPass = () => {
             className="appearance-none text-center italic bg-transparent border-none w-full text-teal-500 mr-3 py-1 px-2 leading-tight focus:outline-none focus:ring-0"
             id="exampleFormControlInput2"
             placeholder="Email address"
+            required
             onChange={(e) => {
               setEmail(e.target.value);
             }}
