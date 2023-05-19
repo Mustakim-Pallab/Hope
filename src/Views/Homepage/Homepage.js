@@ -7,7 +7,6 @@ import styles from "./Homepage.module.css";
 import { WeCareFakeData } from "./WeCareFakeData";
 import WeCarePage from "../../Components/WeCarepage/WeCarepage";
 import WeAreInNumberPage from "../../Components/WeAreInNumberPage/WeAreInNumberPage";
-import { numbers } from "./WeAreInNumberPageFakeData";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 import { testimonyData } from "./TestimonyData";
 import HomeConsultationForm from "../../Components/HomeConsultationForm/HomeConsultationForm";
@@ -28,6 +27,26 @@ const Homepage = () => {
     };
   }, []);
 
+  const [Numbers, setNumbers] = useState([]);
+  const [Services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+  .then(response => response.json())
+  .then(result => setServices(result))
+  .catch(error => console.log('error', error));
+
+  }, []);
+  console.log(Services)
+
+  useEffect(() => {
+    fetch("http://localhost:5000/number")
+  .then(response => response.json())
+  .then(result => setNumbers(result))
+  .catch(error => console.log('error', error));
+
+  }, []);
+  console.log(Numbers)
+  console.log(testimonyData)
   return (
     <main>
       <Topbar />
@@ -44,9 +63,9 @@ const Homepage = () => {
         <HomepageBody />
 
         <HomeAbout />
-        <WeCarePage data={WeCareFakeData} />
-        <WeAreInNumberPage data={numbers} />
-        <Testimonials data={testimonyData} />
+        {/* <WeCarePage data={WeCareFakeData} /> */}
+        <WeAreInNumberPage data={Numbers} />
+        {/* <Testimonials data={testimonyData} /> */}
         <HomeConsultationForm />
         <Footer/>
       </div>

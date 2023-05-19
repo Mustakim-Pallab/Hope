@@ -7,10 +7,10 @@ import Roll from "react-reveal/Roll";
 class RollExample extends React.Component {
   render() {
     return (
-      <div className={`${styles.home}`}>
+      <div className={`${styles.home} lg:px-16 py-32 px-6`}>
         <Roll right>
           <div className="">
-            <h1 className={`${styles.header}`}>Happyness!</h1>
+            <h1 className={`${styles.header}  `}>Happyness!</h1>
           </div>
         </Roll>
         <Roll left>

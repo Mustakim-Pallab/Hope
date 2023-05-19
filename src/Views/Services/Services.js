@@ -4,7 +4,6 @@ import Services_indi from '../../Components/Services_indi/Services_indi';
 import ServiceTopbar from '../../Components/ServiceTopbar/ServiceTopbar';
 import Topbar from '../../Components/Topbar/Topbar';
 import Footer from '../../Components/Footer/Footer'
-import { WeCareFakeData } from '../Homepage/WeCareFakeData';
 import styles from '../Homepage/Homepage.module.css'
 
 const Services = () => {
@@ -20,6 +19,15 @@ const Services = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [Service, setService] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+    .then(response => response.json())
+    .then(result => setService(result))
+    .catch(error => console.log('error', error));
+  }, []);
+
     return (
         <div>
             <Topbar />
@@ -34,7 +42,7 @@ const Services = () => {
       )}
       <div>
         <ServiceTopbar/>
-        <Services_indi data={WeCareFakeData}/>
+        <Services_indi data={Service}/>
         <Footer/>
       </div>
         </div>

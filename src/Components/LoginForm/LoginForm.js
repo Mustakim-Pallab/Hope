@@ -81,13 +81,13 @@ const LoginForm = () => {
   };
   return (
     <section
-      className={`${styles.section} p-10 border rounded-lg justify-center bg-green-50`}
+      className={`${styles.section} sm:p-10 p-4 border rounded-lg justify-center bg-green-50`}
     >
-      <div className={`gap-4 grid grid-cols-2`}>
+      <div className={` sm:gap-4 grid sm:grid-cols-2 sm:px-0 px-24 justify-items-center`}>
         <h1 className={`text-green uppercase text-lg my-5 ${styles.name}`}>
           Hope
         </h1>
-        <div className={`m-4`}>
+        <div className={` flex `}>
           <button>
             <Link
               to={"/login"}
@@ -101,7 +101,7 @@ const LoginForm = () => {
               Login
             </Link>
           </button>
-          <button>
+          <button className="">
             <Link
               to={"/register"}
               className={classNames(
@@ -161,7 +161,7 @@ const LoginForm = () => {
             </label>
           </div>
           <Link
-            className={`text-green-100 hover:text-green  ${styles.sign}`}
+            className={`text-green-100 hover:text-green grid justify-items-end ${styles.sign}`}
             to="/forget"
           >
             Forgot password?

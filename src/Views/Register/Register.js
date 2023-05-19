@@ -1,17 +1,17 @@
 import React from "react";
-import LoginBack from "../../Components/LoginBack/LoginBack";
+import styles from './register.module.css'
+import RegisterForm from '../../Components/RegisterForm/RegisterForm'
 import Navbar from "../../Components/Navbar/Navbar";
-import RegisterForm from "../../Components/RegisterForm/RegisterForm";
-import styles from "./register.module.css";
 
 const Register = () => {
   return (
-    <div>
+    <div className={`${styles.all}`}>
       <Navbar />
-      <LoginBack />
-      <div className={`${styles.form}`}>
-        <RegisterForm />
+      <div className={`flex justify-center  ${styles.background}`}>
+      <div className="p-10 flex content-center">
+      <RegisterForm className={`${styles.login} `}/>
       </div>
+    </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Services_indi = ({ data }) => {
             <div className=" grid lg:grid-cols-2 xl:p-4 xl:px-28 gap-10 m-5  lg:m-16 ">
               <img
                 className={`${styles.image} h-full rounded-lg`}
-                src={item.image}
+                src={`http://localhost:5000/images/${item.imageName}`}
                 alt=""
               />
               <div className="p-2 lg:p-10 lg:pt-0 text-justify">
@@ -50,7 +50,7 @@ const Services_indi = ({ data }) => {
               </div>
               <img
                 className={`${styles.image} h-full p-4 xl:p-0 `}
-                src={item.image}
+                src={`http://localhost:5000/images/${item.imageName}`}
                 alt=""
               />
             </div>

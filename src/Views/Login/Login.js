@@ -1,17 +1,17 @@
 import React from "react";
-import LoginBack from "../../Components/LoginBack/LoginBack";
-import LoginForm from "../../Components/LoginForm/LoginForm";
 import Navbar from "../../Components/Navbar/Navbar";
-import styles from "./Login.module.css";
+import LoginForm from "../../Components/LoginForm/LoginForm";
+import styles from './Login.module.css'
 
 const Login = () => {
   return (
-    <div>
+    <div className={`${styles.all}`}>
       <Navbar />
-      <LoginBack/>
-      <div className={`${styles.form}`}>
-      <LoginForm/>
+      <div className={`flex justify-center  ${styles.background}`}>
+      <div className="p-10 flex content-center">
+      <LoginForm className={`${styles.login} `}/>
       </div>
+    </div>
     </div>
   );
 };

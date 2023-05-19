@@ -1,9 +1,12 @@
+
+
 .background{
-    background: white;
+    background-image: url('../../Assets/Images/welcome\ merged.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
 }
-.form{
-    position: absolute;
-    top: 200px;
-    left:30%;
-    
+.all{
+    overflow: hidden;
 }

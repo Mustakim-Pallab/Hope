@@ -1,11 +1,10 @@
 .home {
   background-image: url(../../Assets/Images/happy2.jpg);
-
-  height: 595px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -999 !important;
+  /* z-index: -999 !important; */
   overflow: hidden;
 }
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=Freehand&display=swap");
@@ -14,25 +13,25 @@
   font-family: "Frank Ruhl Libre", serif;
   font-size: 7em;
   color: rgb(255, 255, 255);
-  justify-items: center;
-  align-items: center;
-  z-index: -999 !important;
-  position: relative;
-  top: 120px;
-  left: 70px;
+  /* justify-items: center;
+  align-items: center; */
+  /* z-index: -999 !important; */
+  /* position: relative; */
+  /* top: 120px;
+  left: 70px; */
 }
 .heading {
   font-family: "Frank Ruhl Libre", serif;
   font-size: 1.5em;
-  color: rgb(255, 255, 255);
-  position: relative;
+  color: #ffffff;
+  /* position: relative;
   top: 100px;
-  left: 78px;
+  left: 78px; */
 }
 .heading span {
   font-family: "Freehand", cursive;
   font-size: 2.5em;
-  top: 100px;
+  /* top: 100px; */
 }
 .button {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -51,4 +50,91 @@
   border: 2px solid rgb(232, 113, 113);
   padding: 8.5px;
   color: rgb(232, 113, 113);
+}
+
+
+@media only screen and (max-width: 1127px) and (min-width: 1000px) {
+  /* CSS rules for the targeted screen size */
+  /* .home{
+    height: 530px;
+    background-position:left;
+  } */
+  .header {
+    font-size: 6.5em;
+   
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .heading span {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 768px) {
+  /* CSS rules for the targeted screen size */
+  /* .home{
+    height: 530px;
+    background-position:left;
+  } */
+  .header {
+    font-size: 5em;
+    margin-top: 5%;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .heading span {
+    font-size: 1.5em;
+  }
+}
+
+
+/* Styles for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) and (min-width: 520px) {
+  /* CSS rules for the targeted screen size */
+  .home{
+    /* height: 530px; */
+    background-position:left;
+  }
+  .header {
+    font-size: 5em;
+    margin-top: 10%;
+    
+  }
+
+  /* .heading {
+    font-size: 1.2em;
+  } */
+
+  .heading span {
+    font-size: 1.5em;
+  }
+}
+
+
+@media only screen and (max-width: 519px)  {
+  /* CSS rules for the targeted screen size */
+  .home{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(../../Assets/Images/happy2.jpg);
+    height: 530px;
+    background-position:center;
+
+  }
+  .header {
+    font-size: 4em;
+    margin-top: 15%;
+  }
+
+  .heading {
+    font-size: 1.2em;
+  }
+
+  .heading span {
+    font-size: 1.5em;
+  }
 }

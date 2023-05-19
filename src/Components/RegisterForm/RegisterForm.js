@@ -86,13 +86,13 @@ const RegisterForm = () => {
   }
   return (
     <section
-      className={`${styles.section} p-10 border rounded-lg justify-center bg-green-50`}
+      className={`${styles.section} sm:p-10 p-4 p-10 border rounded-lg justify-center bg-green-50`}
     >
-      <div className={`gap-4 grid grid-cols-2`}>
+      <div className={`sm:gap-4 grid sm:grid-cols-2 sm:px-0 px-24 justify-items-center`}>
         <h1 className={`text-green uppercase text-lg my-5 ${styles.name}`}>
           Hope
         </h1>
-        <div className={`m-4`}>
+        <div className={` flex m-4`}>
           <button>
             <Link
               to={"/login"}

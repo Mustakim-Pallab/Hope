@@ -17,7 +17,6 @@ const Navbar = () => {
   const [Current, setCurrent] = useState(window.location.pathname);
   const { User } = UseAuth();
   console.log(User);
-  console.log(User.photoURL);
   const handleSignOut = () => {
     const auth = getAuth();
     signOut(auth)

@@ -55,7 +55,7 @@ const TherapistSider = ({ data }) => {
               <img
                 className={` rounded-lg border-2 mx-auto border-green ${styles.image}`}
                 src={item.image}
-                alt="Sunset in the mountains"
+                alt=""
               />
               <div className="px-6 py-4">
                 <div
