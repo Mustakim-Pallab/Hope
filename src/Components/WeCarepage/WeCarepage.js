@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import styles from "./WeCarepage.module.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import { Reveal, Fade } from "react-reveal";
 
 const WeCarepage = ({ data }) => {
@@ -46,6 +48,13 @@ const WeCarepage = ({ data }) => {
       },
     ],
   };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1
+  // };
   return (
     <Fade top cascade>
       <div className={`sm:px-16 md:px-20 lg:px-32 py-32`}>
@@ -57,12 +66,12 @@ const WeCarepage = ({ data }) => {
 
         <Slider {...settings}>
           {data.map((item) => (
-            <div key={item.title}>
+            <div key={item._id}>
               <div className=" bg-white p-5  ">
                 <a href="#">
                   <img
                     className={`rounded-lg ${styles.image}`}
-                    src={item.image}
+                    src={`http://localhost:5000/images/${item.imageName}`}
                     alt=""
                   />
                 </a>

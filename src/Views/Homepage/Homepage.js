@@ -63,9 +63,9 @@ const Homepage = () => {
         <HomepageBody />
 
         <HomeAbout />
-        {/* <WeCarePage data={WeCareFakeData} /> */}
+        <WeCarePage data={Services} />
         <WeAreInNumberPage data={Numbers} />
-        {/* <Testimonials data={testimonyData} /> */}
+        <Testimonials data={testimonyData} />
         <HomeConsultationForm />
         <Footer/>
       </div>

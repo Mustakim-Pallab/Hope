@@ -51,7 +51,7 @@ const About = () => {
       )}
 
       <AboutPageTop />
-      <WeCarepage data={Services} />
+      {/* <WeCarepage data={Services} /> */}
       <GettingStarted />
       <Team data={Therapists} />
       <Footer />
