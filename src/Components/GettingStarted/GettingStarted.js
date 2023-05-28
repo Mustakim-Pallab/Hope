@@ -35,7 +35,7 @@ const GettingStarted = () => {
         Getting Started
       </h1>
       <div
-        className={` grid xl:grid-cols-4 md:grid-cols-2 gap-10 m-4 px-36 `}
+        className={` grid xl:grid-cols-4 md:grid-cols-2 gap-10 m-4 px-0 md:px-24  `}
       >
         {data.map((item, i) => (
           <div key={i} className="grid justify-items-center">
