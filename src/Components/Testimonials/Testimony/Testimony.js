@@ -4,12 +4,13 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 
 const Testimony = ({ data }) => {
+  console.log(data.imageName)
   return (
     <div className={`grid sm:grid-cols-2 lg:px-56 pb-2 ${styles.testimonials}`}>
       {/* <div></div> */}
 
       <img
-        src={data.image}
+        src={`http://localhost:5000/images/${data.imageName}`}
         alt=""
         className={`${styles.image}  pb-20 md:pb-2`}
       />

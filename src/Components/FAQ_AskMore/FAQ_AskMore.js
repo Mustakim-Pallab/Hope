@@ -9,8 +9,30 @@ const FAQ_AskMore = () => {
     values.email != "" && values.question != ""
       ? setClicked(true)
       : setError(true);
-    console.log(values);
+    
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      email: values.email,
+      question:
+      values.question,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:5000/faqAsk", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   };
+  
   const [Error, setError] = useState(false);
   const [values, setValues] = useState({
     email: "",
@@ -40,7 +62,7 @@ const FAQ_AskMore = () => {
             placeholder="Enter Your Question Here"
             onChange={(e) => (values.question = e.target.value)}
           />
-          {!clicked ?  (
+          {!clicked ? (
             <button
               type="submit"
               onClick={handleAskButton}
@@ -57,7 +79,6 @@ const FAQ_AskMore = () => {
             >
               {" "}
               Thanks
-              
             </button>
           )}
         </div>

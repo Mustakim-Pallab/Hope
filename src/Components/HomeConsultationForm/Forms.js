@@ -20,7 +20,32 @@ const Forms = () => {
   const handlePayment = async (paymentId) => {
     
     Values.paymentId = paymentId;
-    console.log(Values);
+    
+    var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  firstname: Values.firstname,
+  lastName: Values.lastName,
+  email: Values.email,
+  city: Values.city,
+  state: Values.state,
+  zip: Values.zip,
+  address: Values.address,
+  paymentId: Values.paymentId
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:5000/bookReq", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
   };
   
   return (

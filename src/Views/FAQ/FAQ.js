@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import Topbar from "../../Components/Topbar/Topbar";
 import styles from "../Homepage/Homepage.module.css";
-import { FAQs } from "./FAQ_Questions_FakeData";
+
 
 const FAQ = () => {
   const [Scroll, setScroll] = useState(window.scrollY);
@@ -22,6 +22,15 @@ const FAQ = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  const [FAQs, setFAQs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/faq")
+  .then(response => response.json())
+  .then(result => setFAQs(result))
+  .catch(error => console.log('error', error));
+
   }, []);
   return (
     <div>

@@ -4,14 +4,11 @@ import HomepageBody from "../../Components/HomepageBody/HomepageBody";
 import Navbar from "../../Components/Navbar/Navbar";
 import Topbar from "../../Components/Topbar/Topbar";
 import styles from "./Homepage.module.css";
-import { WeCareFakeData } from "./WeCareFakeData";
 import WeCarePage from "../../Components/WeCarepage/WeCarepage";
 import WeAreInNumberPage from "../../Components/WeAreInNumberPage/WeAreInNumberPage";
 import Testimonials from "../../Components/Testimonials/Testimonials";
-import { testimonyData } from "./TestimonyData";
 import HomeConsultationForm from "../../Components/HomeConsultationForm/HomeConsultationForm";
 import Footer from "../../Components/Footer/Footer";
-import UseAuth from "../../Components/Hooks/useAuth";
 
 
 const Homepage = () => {
@@ -29,6 +26,8 @@ const Homepage = () => {
 
   const [Numbers, setNumbers] = useState([]);
   const [Services, setServices] = useState([]);
+  const [Testimony, setTestimony] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:5000/services")
   .then(response => response.json())
@@ -36,7 +35,6 @@ const Homepage = () => {
   .catch(error => console.log('error', error));
 
   }, []);
-  console.log(Services)
 
   useEffect(() => {
     fetch("http://localhost:5000/number")
@@ -45,8 +43,15 @@ const Homepage = () => {
   .catch(error => console.log('error', error));
 
   }, []);
-  console.log(Numbers)
-  console.log(testimonyData)
+
+  useEffect(() => {
+    fetch("http://localhost:5000/testimony")
+  .then(response => response.json())
+  .then(result => setTestimony(result))
+  .catch(error => console.log('error', error));
+
+  }, []);
+  
   return (
     <main>
       <Topbar />
@@ -65,7 +70,7 @@ const Homepage = () => {
         <HomeAbout />
         <WeCarePage data={Services} />
         <WeAreInNumberPage data={Numbers} />
-        <Testimonials data={testimonyData} />
+        <Testimonials data={Testimony} />
         <HomeConsultationForm />
         <Footer/>
       </div>
