@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { BsTelephoneFill,BsEnvelopeFill } from "react-icons/bs";
 import {
@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { WeCareFakeData } from "../../Views/Homepage/WeCareFakeData";
 import { navigation } from "../Navbar/NavElements";
 import styles from "./Footer.module.css";
 
@@ -18,6 +17,15 @@ function classNames(...classes) {
 }
 const Footer = () => {
   const [Current, setCurrent] = useState(window.location.pathname);
+  const [Services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+  .then(response => response.json())
+  .then(result => setServices(result))
+  .catch(error => console.log('error', error));
+
+  }, []);
+
   return (
     <div className={`${styles.footer} text-white px-36 py-28 `}>
         <div
@@ -39,9 +47,9 @@ const Footer = () => {
       <div>
         <div>
           <h1 className={`${styles.services} uppercase `}>Services</h1>
-          {WeCareFakeData.map((item) => (
+          {Services.map((item) => (
             <Link
-              key={item.title}
+              key={item._id}
               to={item.href}
               className={classNames(
                 item.href == Current
